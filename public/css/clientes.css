@@ -1,0 +1,146 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    color: #FFFF;
+    justify-content: center;
+    width: 100%;
+    font-size: 14px;
+}
+
+ul.navbar li a {
+    color: white;
+    text-align: center;
+    padding: 0px 10px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #111;
+}
+
+.navbar-centered {
+    display: flex;
+    align-items: center;
+}
+
+ul.navbar li:nth-child(1) {
+    position: absolute;
+    left: 50px;
+}
+
+ul.navbar li:nth-child(3) {
+    position: absolute;
+    right: 50px;
+}
+
+.navbarFloats{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FFFF;
+    max-height: 50px;
+    color: #111;
+}
+
+.menu-options {
+    display: none;
+}
+
+.whatsapp-icon{
+    display: block;
+}
+
+ul.navbarOptions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    color: #eee;
+    font-size: 16px;
+}
+
+ul.navbarOptions li {
+    display: inline-block;
+}
+
+ul.navbarOptions li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+ul.navbarOptions li a:hover {
+    background-color: #ddd;
+}
+
+.grid-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-row-gap: 40px;
+  }
+  
+  .grid-item {
+    background-color: #ffffff;
+  }
+  
+  .grid-wrapper .grid-item:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .content-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .content-container h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin:5px 0px 5px 0px;
+  }
+  
+  .content-container h2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    margin:0px;
+  }
+  

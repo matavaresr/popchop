@@ -1,164 +1,3 @@
-* {
-    font-family: 'Montserrat', sans-serif;
-}
-
-body {
-    margin: 0px;
-}
-
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    height: 30px;
-    color: #FFFF;
-    justify-content: center;
-    width: 100%;
-    font-size: 14px;
-}
-
-ul.navbar li a {
-    color: white;
-    text-align: center;
-    padding: 0px 10px;
-    text-decoration: none;
-}
-
-ul.navbar li a:hover {
-    background-color: #111;
-}
-
-.navbar-centered {
-    display: flex;
-    align-items: center;
-}
-
-ul.navbar li:nth-child(1) {
-    position: absolute;
-    left: 50px;
-}
-
-ul.navbar li:nth-child(3) {
-    position: absolute;
-    right: 50px;
-}
-
-.navbarFloats{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #FFFF;
-    max-height: 50px;
-    color: #111;
-}
-
-.menu-options {
-    display: none;
-}
-
-.whatsapp-icon{
-    display: block;
-}
-
-ul.navbarOptions {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    color: #eee;
-    font-size: 16px;
-}
-
-ul.navbarOptions li {
-    display: inline-block;
-}
-
-ul.navbarOptions li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: .2s;
-}
-
-ul.navbarOptions li a:hover {
-    background-color: #eee;
-}
-
-.head-caroussel {
-    background-image: url("../img/various/example1.png");
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 400px;
-    position: relative;
-}
-
-.head-caroussel .image-container .image-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 52px;
-    font-weight: 600;
-}
-
-.containerInformation {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    padding: 20px 0px 20px 0px;
-}
-
-.containerInformation .column1 {
-    display: flex;
-    flex-direction: column;
-    padding: 60px;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.containerInformation .column1 p{
-    margin: 2px;
-}
-
-.containerInformation .column2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.containerInformation .column2 .grid-item {
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}
-
-.containerInformation .column2 .grid-item p {
-    margin: 0px;
-}
-
-.containerInformation .column2 .grid-item .bold {
-    font-size: 42px;
-    font-weight: 800;
-}
-
-.containerInformation .column2 .grid-item p:nth-child(2n) {
-    font-size: 24px;
-  }
-
 .containerProductos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,8 +64,15 @@ ul.navbarOptions li a:hover {
     padding: 8px 20px;
     border: 1px solid gray;
     background-color: white;
-    color: black;
+    color: #222222;
     font-size: 24px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.containerProductos .grid-item .button:hover {
+    color: white;
+    background: #222222;
 }
 
 .text-with-line {
@@ -244,7 +90,7 @@ ul.navbarOptions li a:hover {
     transform: translateY(-50%);
     width: calc(100% - 19.5em);
     height: 1px;
-    background-color: black;
+    background-color: #222222;
 }
 
 .containerUltimo {
@@ -263,7 +109,14 @@ ul.navbarOptions li a:hover {
     max-width: 300px;
     display: block;
     margin: 0 auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    cursor: pointer;
 }
+
+.containerUltimo .image:hover {
+    filter: none;
+  }
 
 .containerUltimo .image-title {
     margin: 10px 0px 0px 0px;
@@ -275,19 +128,21 @@ ul.navbarOptions li a:hover {
     margin-top: 5px;
 }
 
-
 .background-lightgray {
     background-color: #f7f7f7;
     padding: 20px 0px;
 }
+
+.carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
 
 /* Estilos de las opiniones */
 .testimonial {
     padding: 20px;
     margin: 0px auto;
     font-size: 24px;
-    /*box-shadow: 1px 7px 13px rgb(0 0 0 / 8%);*/
-    width: 75%;
 }
 
 .testimonial .comment {
@@ -355,7 +210,7 @@ ul.navbarOptions li a:hover {
 .redirect-paquete .column2 {
     padding: 40px 100px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     max-width: 50%;
@@ -365,10 +220,18 @@ ul.navbarOptions li a:hover {
     margin-top: 10px;
     padding: 8px 20px;
     border: 1px solid gray;
-    background-color: black;
+    background-color: #222222;
     color: white;
     font-size: 24px;
     font-weight: lighter;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.redirect-paquete .column2 button:hover {
+    background-color: #FFFFFF;
+    color: #222222;
+    border: 1px solid #222222;
 }
 
 .redirect-paquete .column2 p:nth-child(1n){
@@ -389,7 +252,7 @@ ul.navbarOptions li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 35px;
-    width: 75%;
+    width: 60%;
     margin: auto;
 }
 
@@ -407,10 +270,17 @@ ul.navbarOptions li a:hover {
 
 input[type="submit"] {
     width: 100px;
-    background-color: #111;
+    background-color: #222222;
     color: white;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
+.form-container input[type="submit"]:hover{
+    background-color: #FFFFFF;
+    color: #222222;
+    border: 1px solid #222222;
+}
 
 .text-contacto {
     display: inline-block;
@@ -427,7 +297,15 @@ input[type="submit"] {
     transform: translateY(-50%);
     width: calc(100% - 34.5em);
     height: 1px;
-    background-color: black;
+    background-color: #222222;
+}
+
+
+
+.redirect-paquete .column2 button:hover {
+background-color: #FFFFFF;
+color: #222222;
+border: 1px solid #222222;
 }
 
 @media (max-width: 965px) {
@@ -437,23 +315,6 @@ input[type="submit"] {
 
     .containerProductos  {
         grid-template-columns: 1fr;
-    }
-
-    .navbarFloats {
-        justify-content: space-between;
-        margin: 0px 50px;
-    }
-
-    .navbarOptions {
-        display: none !important;
-    }
-
-    .menu-options {
-        display: block;
-    }
-
-    .navbar-centered {
-        display: none;
     }
 
     .redirect-paquete .column1 {
@@ -470,12 +331,6 @@ input[type="submit"] {
 }
 
 @media (max-width: 750px) {
-    .containerInformation {
-        grid-template-columns: 1fr;
-        display: flex;
-        flex-direction: column;
-    }   
-
     .form-container {
         grid-template-columns: 1fr;
     }
